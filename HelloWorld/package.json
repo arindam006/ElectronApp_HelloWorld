@@ -1,0 +1,19 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "@rindam",
+  "license": "ISC",
+  "dependencies": {
+    "electron-packager": "^11.1.0",
+    "eslint": "^4.19.0",
+    "jshint": "^2.9.5"
+  },
+  "devDependencies": {
+    "electron": "^1.8.3"
+  }
+}
