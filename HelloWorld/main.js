@@ -13,10 +13,15 @@ app.on('ready', function(){
     height:768,
     backgroundColor:'#ffffff'
   });
+
+  //opens a browser window
   // mainWindow.loadURL('https://www.youtube.com');
+
+  //renders html page
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, 'contents/html/index.html'),
     protocol: 'file:',
     slashes: true
   }));
+  
 });
