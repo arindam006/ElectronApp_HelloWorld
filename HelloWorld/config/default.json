@@ -1,8 +1,19 @@
 {
     "App" : {
-        "BackgroundColor" : "#000000"
+        "Styling": {
+            "Main": {
+                "BackgroundColor": "#FFFFFF",
+                "DefaultHeight": 1024,
+                "DefaultWidth": 768
+            }
+        },
+        "TestURLLoadAddress" : "https://www.youtube.com",
+        "StartingPoint" : "contents/html/test.html"
     },
     "Keys" : {
-
+        "testKey" : "Sample String Value From config/default.json"
+    },
+    "Messages": {
+        "MSG001": "Hello ! ! "
     }
 }

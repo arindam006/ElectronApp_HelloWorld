@@ -8,21 +8,28 @@ const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow;
 
-var bgCol = config.get("App.BackgroundColor");
+var BackgroundColor = config.get("App.Styling.Main.BackgroundColor");
+var DefaultHeight = config.get("App.Styling.Main.DefaultHeight");
+var DefaultWidth = config.get("App.Styling.Main.DefaultWidth");
+var TestURLLoadAddress = config.get("App.TestURLLoadAddress");
+var StartingPoint = config.get("App.StartingPoint");
+
 
 app.on('ready', function(){
   mainWindow = new BrowserWindow({
-    width:1024,
-    height:768,
-    backgroundColor: bgCol
+    icon: path.join(__dirname, 'assets/icons/png/icon.png'),
+    title: "My First Electron App",
+    width: DefaultHeight,
+    height: DefaultWidth,
+    backgroundColor: BackgroundColor
   });
 
   //opens a browser window
-  // mainWindow.loadURL('https://www.youtube.com');
+  //mainWindow.loadURL(TestURLLoadAddress);
 
   //renders html page
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'contents/html/test.html'),
+    pathname: path.join(__dirname, StartingPoint),
     protocol: 'file:',
     slashes: true
   }));

@@ -10,11 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "config": "^1.30.0",
+    "electron": "^1.8.3"
+  },
+  "devDependencies": {
+    "config": "^1.30.0",
+    "electron": "^1.8.3",
     "electron-packager": "^11.1.0",
     "eslint": "^4.19.0",
     "jshint": "^2.9.5"
-  },
-  "devDependencies": {
-    "electron": "^1.8.3"
   }
 }

@@ -1,0 +1,13 @@
+{
+    "App" : {
+        "Styling": {
+            "Main": {
+                "BackgroundColor": "#D7BDBD"
+            }
+        },
+        "TestURLLoadAddress" : "https://www.facebook.com"
+    },
+    "Messages": {
+        "MSG001": "Hello ! ! (production)"
+    }
+}
