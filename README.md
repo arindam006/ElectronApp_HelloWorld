@@ -19,11 +19,11 @@ C:\TECH\Electron Apps\Apps\HelloWorld>npm install –-save --verbose
 
 Install following packages globally.
 
-C:\Users\arind>npm install -g electron
-C:\Users\arind>npm install -g electron-packager
-C:\Users\arind>npm install -g eslint
-C:\Users\arind>npm install -g jshint 
-C:\Users\arind>npm install -g config
+C:\Users\arind>npm install -g electron --verbose
+C:\Users\arind>npm install -g electron-packager --verbose
+C:\Users\arind>npm install -g eslint --verbose
+C:\Users\arind>npm install -g jshint --verbose
+C:\Users\arind>npm install -g config --verbose
 
 II.	Installing Local Packages & Adding Dependencies
 
