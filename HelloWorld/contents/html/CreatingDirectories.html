@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My First Electron App : File Operations - Creating directory (fs Module)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>window.$ = window.jQuery = require("../../assets/js/jquery.min.js")</script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <script src="../js/CreatingDirectories.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <p>
+            <a href="index.html">Home</a>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <button id="btn1" onclick="resetAllLabels()">Reset All Messages</button>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Create Directory (under app_data)</legend>
+        <p id="p11">
+            <input id="txt11" type="text" />
+            <button id="btn11" onclick="createDirectiryInAppData()">Create</button>
+            <span id="lbl11" style="color:red" />
+        </p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Delete Directory (recursive) (under app_data)</legend>
+        <p id="p12">
+            <input id="txt12" type="text" />
+            <button id="btn12" onclick="deleteDirectoryInAppData()">Delete</button>
+            <span id="lbl12" style="color:red" />
+        </p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Create Directory (anywhere</legend>
+        <p id="p21">
+            <input id="txt21" type="text" />
+            <button id="btn21" onclick="createDirectoryAnywhere()">Create</button>
+            <span id="lbl21" style="color:red" />
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Delete Directory (recursive) (anywhere)</legend>
+        <p id="p22">
+            <input id="txt22" type="text" />
+            <button id="btn22" onclick="deleteDirectoryAnywhere()">Delete</button>
+            <span id="lbl22" style="color:red" />
+        </p>
+    </fieldset>
+</body>

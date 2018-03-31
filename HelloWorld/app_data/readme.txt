@@ -1,0 +1,1 @@
+predefined folder for all file & folder operations inside application root.

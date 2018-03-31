@@ -2,13 +2,13 @@
     "App" : {
         "Styling": {
             "Main": {
-                "BackgroundColor": "#FFFFFF",
+                "BackgroundColor": "#F4F2FB",
                 "DefaultHeight": 1024,
                 "DefaultWidth": 768
             }
         },
         "TestURLLoadAddress" : "https://www.youtube.com",
-        "StartingPoint" : "contents/html/test.html"
+        "StartingPoint" : "contents/html/index.html"
     },
     "Keys" : {
         "testKey" : "Sample String Value From config/default.json"

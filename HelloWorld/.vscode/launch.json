@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch (Node)", /*To Debug Main Process*/
+            "name": "Launch (Node)",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/main.js",
@@ -22,7 +22,7 @@
             "outFiles": []
         },
         {
-            "name": "Debug (Chrome)",/*To Debug Rendering Process*/
+            "name": "Debug (Chrome)",
             "type": "chrome",
             "request": "launch",
             "cwd": "${workspaceRoot}",
@@ -37,6 +37,14 @@
                 "NODE_ENV": "development"
             },
             "sourceMaps": false
+        },
+        {
+            "name": "Attach",
+            "type": "node",
+            "request": "attach",
+            "port": 8080,
+            "sourceMaps": false,
+            "outFiles": []
         }
     ]
 }
