@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My First Electron App : File Operations - Creating directory (fs Module)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>window.$ = window.jQuery = require("../../assets/js/jquery.min.js")</script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <script src="../js/GlobalObjects.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <p>
+            <a href="index.html">&lt;&lt;Home</a>
+            <br/>
+            <a href="#" onclick="location.reload();">#Reload</a>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <button id="btn1" onclick="resetAllLabels()">Reset All Messages</button>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Globabl Strings</legend>
+        <ol>
+            <li>
+                <b>__filename:</b> The __filename signifies the filename of the code which is under execution. It is nothing but the resolved
+                absolute path of the code file. When working with a main program then it is not unavoidably the same filename which is used
+                in the command line.
+                <br/>
+                <button id="btn11" onclick="showFileName()">Show</button>
+                <span id="lbl11" style="color:red" />
+            </li>
+            <li>
+                <b>__dirname:</b> The __dirname signifies the name of the directory that exists in the executing script. When we log the value
+                of this global string, then it will print the absolute directory path where the script file exists on the machine drive.
+                <br/>
+                <button id="btn12" onclick="showDirName()">Show</button>
+                <span id="lbl12" style="color:red" />
+            </li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>Globabl Functions</legend>
+        <ol>
+            <li>
+                <b>setTimeout (callback, milliseconds) & clearTimeout (time):</b> The ‘setTimeout (callback, milliseconds)’ is the global function
+                which is used to run callback after waiting for the given time in the milliseconds. These are the two parameters which are
+                passed to this function. The maximum time to which such a timer could span is 24.8 days.
+                <br/> The ‘clearTimeout (time)’ is a global function which is used to stop a timer which was previously created with the help
+                of the ‘setTimeout ()’ function. Here. the parameter time is the timer which is returned by the ‘setTimeout ()’ function.
+                <br/>
+                <button id="btn131" onclick="printHelloWorld_setTimeout()">Set Timeout after 5 Seconds</button>
+                <button id="btn132" onclick="printHelloWorld_clearTimeout()">Clear Timeout before 5 Seconds</button>
+                <span id="lbl13" style="color:red" />
+            </li>
+            <li>
+                <b>setInterval (callback, milliseconds) & clearInterval (time):</b> The setInterval(cb, ms) global function is used to run callback
+                cb repeatedly after at least ms milliseconds. The actual delay depends on external factors like OS timer granularity and
+                system load. A timer cannot span more than 24.8 days.
+                <br/> This function returns an opaque value that represents the timer which can be used to clear the timer using the function
+                clearInterval(time).
+                <br/>
+                <button id="btn141" onclick="printHelloWorld_setInterval()">Set Interval at 5 Seconds</button>
+                <button id="btn142" onclick="printHelloWorld_clearInterval()">Clear Interval</button>
+                <span id="lbl14" style="color:red" />
+            </li>
+        </ol>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Globabl Functions - Process</legend>
+        <p id="p21">
+            <b>Process Events : </b>
+            <br/>
+            <ol>
+                <li>
+                    <b>exit - </b>Emitted when the process is about to exit. There is no way to prevent the exiting of the event loop at this point,
+                    and once all exit listeners have finished running, the process will exit.
+                    <br/>
+                    <button id="btn211" onclick="initiateProcessEventOnExit()">Initiate Process 'exit' event listener</button>
+                    <button id="btn212" onclick="exit()">process.exit()</button>
+                    <span id="lbl21" style="color:red" />
+                </li>
+                <li>
+                    <b>beforeExit - </b>This event is emitted when node empties its event loop and has nothing else to schedule. Normally, the node
+                    exits when there is no work scheduled, but a listener for 'beforeExit' can make asynchronous calls, and cause the node to
+                    continue.
+                </li>
+                <li>
+                    <b>uncaughtException - </b>If a listener is added for this exception, the default action (which is to print a stack trace and
+                    exit) will not occur.
+                </li>
+                <li>
+                    <b>Signal Events</b>Emitted when the processes receives a signal such as SIGINT, SIGHUP, etc.
+                </li>
+            </ol>
+            <br/>
+            <b>Process Properties : </b>
+            <br/>
+            <ol>
+                <li>
+                    <b>arch & platform - </b>Returns the processor architecture ('arm', 'ia32', or 'x64') and platform ('darwin', 'freebsd', 'linux',
+                    'sunos' or 'win32') on which node is running.
+                    <br/>
+                    <button id="btn22" onclick="getArchitectureAndPlatform()">Get Architecture & Platform</button>
+                    <span id="lbl22" style="color:red" />
+                </li>
+                <li>
+                    Rest needs to be done.
+                    <a href="https://www.tutorialspoint.com/nodejs/nodejs_process.htm">Link</a>
+                </li>
+            </ol>
+            <br/>
+        </p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Globabl Object - Console</legend>
+        <ol>
+            <li>console.log([data][, …]) - This method is used to print to stdout with the newline. 
+                It can take multiple arguments in a printf ()-like fashion.</li>
+            <li>console.info([data][, …]) - This method is used to print to stdout with newline. 
+                It can take multiple arguments in a printf ()-like fashion.</li>
+            <li>console.error([data][, …]) - This method is used to print to stderr with newline. 
+                It can take multiple arguments in a printf ()-like fashion.</li>
+            <li>console.dir(obj[, options]) - This method uses util.inspect on obj and prints the resulting string to stdout.</li>
+            <li>console.time (label) - This method is used to mark a time.</li>
+            <li>console.timeEnd (label) - This method is used to finish timer and record the output.</li>
+            <li>console.trace (message[, …]) - This method is used to print to stderr ‘Trace :’ which is followed by 
+                the formatted message and the stack trace to the current position.</li>
+            <li>console.assert(value[, message][, …]) - This method works similar to the assert.ok (), but in this case 
+                the error message is formatted as util.format (message…).</li>
+        </ol>
+    </fieldset>
+</body>
